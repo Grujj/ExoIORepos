@@ -11,6 +11,7 @@ public class UtilisateurWriter {
 
     private final static String CIVILITE_MR = "Mr";
     private final static String CIVILITE_MME = "Mme";
+    private final static String SEPARATEUR = ";";
 
     /**
      * Methode qui ecrit un utilisateur dans un fichier
@@ -94,7 +95,7 @@ public class UtilisateurWriter {
 
         /* Ajout d une string a la string formatee avec son separateur */
         for (String str : listStrings)
-            formatedString.append(str).append(";");
+            formatedString.append(str).append(UtilisateurWriter.SEPARATEUR);
 
         /* Retourne la string formatee en supprimant le dernier separateur inutile */
         return formatedString.substring(0, formatedString.length() - 1);
