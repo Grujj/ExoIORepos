@@ -5,8 +5,14 @@ import java.io.IOException;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException {
+    public static final String FILE = "ExoIO/src/resources/resultat.txt";
 
-        UtilisateurWriter.writeUtilisateur("ExoIO/src/resources/resulat.txt", NomPrenomReader.readNom(), NomPrenomReader.readPrenom(), 5);
+    public static void main(String[] args) {
+
+        try{
+            UtilisateurWriter.writeUtilisateur(Main.FILE, NomPrenomReader.readNom(), NomPrenomReader.readPrenom(), 5);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
