@@ -90,11 +90,11 @@ public class UtilisateurWriter {
     private static String formatCSV(String... listStrings){
 
         /* Initialisation de la string formatee */
-        String formatedString = "";
+        StringBuilder formatedString = new StringBuilder();
 
         /* Ajout d une string a la string formatee avec son separateur */
         for (String str : listStrings)
-            formatedString += str + ";";
+            formatedString.append(str).append(";");
 
         /* Retourne la string formatee en supprimant le dernier separateur inutile */
         return formatedString.substring(0, formatedString.length() - 1);
